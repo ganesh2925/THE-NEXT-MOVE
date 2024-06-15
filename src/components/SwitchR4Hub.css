@@ -1,0 +1,67 @@
+.switch-r4-hub {
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  align-items: center;
+  background-color: #2e2e2e;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.switch-image {
+  width: 100%; /* Make image responsive */
+  max-width: 667px; /* Set max width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Space between image and text */
+  margin-left: -5rem;
+}
+
+.switch-description {
+  color: white;
+  width: 100%; /* Ensure text takes full width */
+  text-align: center; /* Center align text */
+}
+
+.exp {
+  color: #f4a341;
+  margin: 0;
+  letter-spacing: 4px;
+  font-size: 20px;
+  margin-top: 1rem; /* Adjust top margin for mobile view */
+}
+
+.switch-description h1 {
+  font-size: 46px; /* Adjust font size for mobile view */
+  margin: 10px 0;
+  font-weight: 100;
+  
+}
+
+.switch-description p {
+  font-size: 24px; /* Adjust font size for mobile view */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 20px;
+
+}
+
+@media (min-width: 768px) {
+  .switch-r4-hub {
+    flex-direction: row; /* Display content side by side on tablets and larger */
+    justify-content: space-between; /* Space out image and text */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .switch-description {
+    width: 50%; /* Take half the width on tablets */
+    text-align: left; /* Align text to the left */
+  }
+
+  .exp {
+    margin-top: 5rem; /* Restore margin for larger screens */
+  }
+
+  .switch-image {
+    margin-bottom: 0; /* Remove margin between image and text */
+  }
+}

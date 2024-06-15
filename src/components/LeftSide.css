@@ -1,0 +1,85 @@
+/* LeftSide.css */
+.switch-r4-hubl-container {
+  overflow: hidden; /* Clip overflowing content */
+}
+
+.switch-r4-hub-l {
+  display: flex;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.switch-image-l {
+  width: 603px;
+  height: 619px;
+  margin-right: -47rem;
+  margin-left: 6rem; /* Adjust this value for desired amount of image out of screen */
+  transition: transform 0.5s ease;
+}
+
+.switch-description-l {
+  color: white;
+  margin-left: 4rem;
+  width: 663px;
+}
+
+.exp-l {
+  color: #f4a341; /* Color for "EXPERIENCES" */
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+
+.switch-description-l h1 {
+  font-size: 46px;
+  margin: 10px 0;
+  font-weight: 100;
+}
+
+.switch-description-l p {
+  font-size: 24px;
+}
+
+.adjusted-image-width {
+  width: 300px; /* Adjust the width here */
+}
+@media (max-width: 768px) {
+  .switch-r4-hubl-container {
+    height: 53vh;
+   
+  }
+  .switch-r4-hub-l {
+    flex-direction: row; /* Display content side by side on tablets and larger */
+    justify-content: space-between; /* Space out image and text */
+    align-items: flex-start; /* Align items to the top */
+    height: 10vh;
+  }
+
+  .switch-description-l {
+    width: 60%; /* Take half the width on tablets */
+    position: relative;
+    top: 12rem;
+    left:2rem;
+
+  }
+
+  .exp-l {
+    margin-top: 5rem; /* Restore margin for larger screens */
+    font-size: 1rem;
+  }
+  .switch-description-l h1{
+    font-size: 1.5rem;
+
+  }
+  .switch-description-l p{
+    font-size: 1rem;
+  }
+  
+    .switch-image-l {
+      width: 20rem;
+      position: relative;
+      height: 17rem;
+      right: 50rem;
+  }  
+}

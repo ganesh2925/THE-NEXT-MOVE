@@ -1,0 +1,13 @@
+/* ReviewSlider.css */
+.product-slider {
+    width: 10123px;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 80%;
+    height: 100%;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: #ffffff;
+  }
