@@ -123,19 +123,19 @@ body {
 
 @media only screen and (max-width: 600px) {
     .faq-container {
+        width: 100%;
         gap: 0;
     }
     .faq-container .title {
-        margin: 25px;
         font-size: 30px;
     }
     .questions-answer {
         flex-direction: column;
     }
-    .questions-answer .question {
-        width: 100%;
+    .questions-answer .question-box {
+        margin: 0 auto;
     }
     .questions-answer .answer-box {
-        width: 100%;
+        margin: 0 auto;
     }
   }
