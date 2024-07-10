@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
 
-body {
-    background-color: rgb(33,37,41);
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    height: 632px;
-}
+body, html {
+    margin: 0;
+    padding: 0;
+} 
 .faq-container {
     width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    gap: 48px;
+    gap: 28px;
 }
 .faq-container .title {
     color:  #FFFFFF;
