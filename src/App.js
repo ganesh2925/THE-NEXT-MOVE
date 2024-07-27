@@ -14,7 +14,9 @@ import ContactUs from './Pages/ContactUs.js';
 import Navbar from './components/Navigation/NavBar.jsx';
 import './App.css';
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer.js';
 
 
 
@@ -32,7 +34,9 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
       </Routes>
     </div>
-  </Router>
+     
+    <Footer/>
+    </Router>
 
   );
 };

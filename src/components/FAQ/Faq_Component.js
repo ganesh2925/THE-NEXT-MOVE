@@ -82,10 +82,10 @@ function Faq_Component() {
             ))}
           </div>
         </div>
-        <div className='answer-box'>
-          <h3 key={answerData.question}>{answerData.question}</h3>
-          <p key={answerData.answer.answer1}>{answerData.answer.answer1}</p>
-          <p key={answerData.answer.answer2}>{answerData.answer.answer2}</p>
+        <div className="answer-box w-1/2 h-[90vh] bg-blue-50 p-10 rounded shadow-lg">
+            <h3 key={answerData.question} className="text-lg font-bold mb-4">{answerData.question}</h3>
+            <p key={answerData.answer.answer1} className="mb-4">{answerData.answer.answer1}</p>
+            <p key={answerData.answer.answer2}>{answerData.answer.answer2}</p>
         </div>
       </div>
     </div>

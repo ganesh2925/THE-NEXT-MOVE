@@ -1,9 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 import ReviewCard from './ReviewCard';
-import './ReviewSlider.css';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import h1 from '../../assets/h1.png';
 
 const reviews = [
@@ -18,7 +17,7 @@ const reviews = [
     avatar: h1,
     name: 'Ibuk Sukijan',
     position: 'Ibu Rumah Tangga',
-    text: 'Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah.',
+    text: 'Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal.',
     rating: 4,
   },
   {
@@ -45,7 +44,7 @@ const ReviewSlider = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           arrows: true,
-          dots:true,
+          dots: true,
         },
       },
       {
@@ -53,19 +52,19 @@ const ReviewSlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: true,
-          dots:true,
+          arrows: false,
+          dots: true,
         },
       },
     ],
   };
 
   return (
-    <div>
-      <header className="Review-header">
+    <div className="py-10">
+      <header className="text-4xl text-white text-center font-light mb-10">
         <p>Our Client Reviews</p>
       </header>
-      <div className="review-slider">
+      <div className="w-11/12 mx-auto">
         <Slider {...settings}>
           {reviews.map((review, index) => (
             <ReviewCard key={index} review={review} />
