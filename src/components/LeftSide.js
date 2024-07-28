@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './LeftSide.css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,8 +22,8 @@ const SwitchR4Hubl = ({ image, experience, title, description, imageStyle }) => 
 
     t2.fromTo(
       imageRef.current,
-      { x: -200, opacity: 0 },
-      { x: 0, opacity: 1 }
+      { x: -200,y:0, opacity: 0 },
+      { x: 0,y:0, opacity: 1 }
     )
     .fromTo(
       expRef.current,
@@ -47,14 +46,22 @@ const SwitchR4Hubl = ({ image, experience, title, description, imageStyle }) => 
   }, []);
 
   return (
-    <div className="switch-r4-hubl-container">
-      <div className="switch-r4-hub-l">
-        <div className="switch-description-l">
-          <div className='exp-l' ref={expRef}>{experience}</div>
-          <h1 ref={titleRef}>{title}</h1>
-          <p ref={descRef}>{description}</p>
+    <div className="overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center rounded-lg mb-5 p-4 md:p-0">
+        <div className="order-1 md:order-2 w-full md:w-1/2 flex justify-center mb-4 md:mb-0">
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-60 h-60 md:w-96 md:h-96 lg:ml-32 lg:w-full lg:h-full transform transition-transform duration-500" 
+            style={imageStyle} 
+            ref={imageRef} 
+          />
         </div>
-        <img src={image} alt={title} className="switch-image-l" style={imageStyle} ref={imageRef} />
+        <div className="order-2 md:order-1 text-center md:text-left text-white mb-4 md:w-5/12 md:ml-16 p-4 md:p-0">
+          <div className="text-orange-400 tracking-wide text-lg md:text-xl mb-2 md:mt-20" ref={expRef}>{experience}</div>
+          <h1 className="text-2xl md:text-4xl font-light mb-4" ref={titleRef}>{title}</h1>
+          <p className="text-base md:text-lg" ref={descRef}>{description}</p>
+        </div>
       </div>
     </div>
   );

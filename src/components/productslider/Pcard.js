@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import './Pcard.css';
 import gsap from 'gsap';
 
 const Pcard = ({ product }) => {
@@ -31,18 +30,23 @@ const Pcard = ({ product }) => {
   }, []);
 
   return (
-    <div className='pcard' ref={cardRef}>
-      <div className='pcard-img'>
-        <img src={product.image} alt={product.name} />
+    <div
+      className="relative w-[350px] h-[466px] mx-auto flex flex-col bg-slate-50 items-center bg-azure transition-transform duration-300 ease-in-out hover:scale-105"
+      ref={cardRef}
+    >
+      <div className="w-full">
+        <img src={product.image} alt={product.name} className="h-60 w-full object-cover" />
       </div>
-      <div className='pcard-info'>
-        <h3>{product.name}</h3>
-        <p>{product.intro}</p>
-        <h4><span>&#8377;</span>{product.price}</h4>
+      <div className="w-full text-center mt-2 px-4 space-y-2">
+        <h3 className="text-lg font-semibold">{product.name}</h3>
+        <p className="text-sm font-light">{product.intro}</p>
+        <h4 className="text-xl font-bold">
+          <span>&#8377;</span>{product.price}
+        </h4>
       </div>
-      <div className='links'>
-        <a href="#" className='buy-now'>Buy Now</a>
-        <span><a href="#" className='read-more'>Read More</a></span>
+      <div className="mt-4 flex justify-center space-x-4">
+        <a href="/order-now" className="text-[#6941C6] font-semibold">Buy Now</a>
+        <a href="/product-catalog" className="text-[#C11574] font-semibold">Read More</a>
       </div>
     </div>
   );

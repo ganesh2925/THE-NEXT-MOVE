@@ -7,7 +7,7 @@ import h3 from '../../assets/h3.png';
 import h4 from '../../assets/h4.png';
 import h5 from '../../assets/h5.png';
 import HLogo from '../../assets/HLogo.png';
-import './HeroSection.css'
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -91,11 +91,11 @@ const HeroSection = () => {
           style={{ top: '15%', left: '50%', transform: 'translate(-50%, -50%)' }}
         />
         <img
-          className="hero-logo hl absolute w-32 md:w-48 h-32 md:h-48"
+          className="hero-logo hl absolute w-28 md:w-48 h-24 md:h-48"
           src={HLogo}
           alt="Hero Logo"
           ref={addToRefs}
-          style={{ top: '50%', left: '50%', width:230 ,transform: 'translate(-50%, -50%)' }}
+          style={{ top: '50%', left: '50%',transform: 'translate(-50%, -50%)' }}
         />
       </div>
       <div className="left-des mb-20 md:mt-40 ml-4 md:ml-16" ref={leftDesRef}>
